@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0;
+  background: rgb(255, 211, 195);
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.header__links {
+  display: flex;
+  gap: 40px;
+}
+.header__links-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #424551;
+}
+.header__buttons {
+  display: flex;
+  gap: 36px;
+}
+.header__buttons-left {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  color: #fff;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  border-radius: 4px;
+  padding: 0 40px;
+  border: none;
+}
+.header__buttons-right {
+  display: flex;
+  background: transparent;
+  align-items: center;
+  border: none;
+  gap: 8px;
+}
+.header__wrapper {
+  display: flex;
+}
+.header__wrapper-img {
+  margin-top: 128px;
+  margin-left: 140px;
+}
+.header__content {
+  margin-top: 140px;
+}
+.header__content-title {
+  margin-top: 24px;
+  width: 496px;
+  height: 249px;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  color: #1e212c;
+}
+.header__content-button {
+  width: 148px;
+  height: 52px;
+  margin-top: 60px;
+  color: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  border-radius: 4px;
+  border-color: orangered;
+  background: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  color: orangered;
+}
+.header__content-button1 {
+  width: 200px;
+  height: 52px;
+  padding: 0 40px;
+  position: relative;
+  border: none;
+  top: -2px;
+  left: 24px;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  color: #fff;
+}
+.header__video {
+  display: flex;
+  align-items: center;
+}
+.header__video-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1e212c;
+}
+.header__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 189px;
+  gap: 46px;
+}
+.header__bottom-numbers {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 59px;
+  color: #1e212c;
+}
+.header__bottom-span {
+  position: relative;
+  top: -10px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #1e212c;
+}
+.header__elements-img {
+  position: absolute;
+  top: 55px;
+  left: 5px;
+}
+.header__elements-img1 {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+.header__elements-img2 {
+  position: absolute;
+  top: 430px;
+  left: 600px;
+}
+.header__elements-img3 {
+  position: absolute;
+  top: 700px;
+  left: 580px;
+}
+.header__elements-img4 {
+  position: absolute;
+  left: 0px;
+  top: 838px;
+}
+.header__elements-img5 {
+  position: absolute;
+  right: 0px;
+  top: 820px;
+}
+
+.section__element-img {
+  position: absolute;
+  left: -25px;
+  top: 1300px;
+}
+.section__element-img1 {
+  position: absolute;
+  right: 0px;
+  top: 1500px;
+}
+.section__card {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+.section__right {
+  margin-left: 135px;
+}
+.section__right-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1e212c;
+}
+.section__right-title {
+  margin-top: 8px;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 59.8px;
+  color: #1e212c;
+}
+.section__checks {
+  width: 390px;
+  height: 294px;
+  margin-top: 40px;
+}
+.section__checks-check {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+.section__checks-text {
+  margin-bottom: 12px;
+}
+.section__buttons-button {
+  width: 161px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 44px;
+  color: #fff;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  border-radius: 4px;
+  border: none;
+}/*# sourceMappingURL=style.css.map */

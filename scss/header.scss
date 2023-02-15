@@ -1,0 +1,189 @@
+.header {
+  padding: 20px 0;
+  background: rgb(255, 211, 195);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  &__links {
+    display: flex;
+    gap: 40px;
+    &-link {
+      @include text(700, 16px, 25.6px, #424551);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 36px;
+
+    &-left {
+      @include text(700, 16px, 52px, #fff);
+      background: $primary;
+      border-radius: 4px;
+      padding: 0 40px;
+      border: none;
+    }
+    &-right {
+      display: flex;
+      background: transparent;
+      align-items: center;
+      border: none;
+      gap: 8px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+
+    &-img {
+      margin-top: 128px;
+      margin-left: 140px;
+    }
+  }
+  &__content {
+    margin-top: 140px;
+
+    &-title {
+      margin-top: 24px;
+      width: 496px;
+      height: 249px;
+      @include text(900, 64px, 83px, #1e212c);
+    }
+    &-button {
+      width: 148px;
+      height: 52px;
+      margin-top: 60px;
+      color: $primary;
+      border-radius: 4px;
+      border-color: orangered;
+      background: transparent;
+      @include text(700, 16px, 52px, orangered);
+    }
+    &-button1 {
+      width: 200px;
+      height: 52px;
+      padding: 0 40px;
+      position: relative;
+      border: none;
+      top: -2px;
+      left: 24px;
+      background: $primary;
+      border-radius: 4px;
+      @include text(700, 16px, 52px, #fff);
+    }
+  }
+  &__video {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      @include text(700, 14px, 21px, #1e212c);
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 189px;
+    gap: 46px;
+
+    &-numbers {
+      @include text(900, 46px, 59px, #1e212c);
+    }
+    &-span {
+      position: relative;
+      top: -10px;
+      @include text(400, 16px, 25px, #1e212c);
+    }
+  }
+  &__elements {
+    &-img {
+      position: absolute;
+      top: 55px;
+      left: 5px;
+    }
+    &-img1 {
+      position: absolute;
+      right: 10px;
+      top: 0px;
+    }
+    &-img2 {
+      position: absolute;
+      top: 430px;
+      left: 600px;
+    }
+    &-img3 {
+      position: absolute;
+      top: 700px;
+      left: 580px;
+    }
+    &-img4 {
+      position: absolute;
+      left: 0px;
+      top: 838px;
+    }
+    &-img5 {
+      position: absolute;
+      right: 0px;
+      top: 820px;
+    }
+  }
+}
+.section {
+  &__element{
+    &-img{
+      position: absolute;
+      left: -25px;
+      top: 1300px;
+    }
+    &-img1{
+      position: absolute;
+      right: 0px;
+      top: 1500px;
+    }
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+  }
+  &__right {
+    margin-left: 135px;
+
+    &-text {
+      @include text(700, 16px, 24px, #1e212c);
+    }
+    &-title {
+      margin-top: 8px;
+      @include text(900, 46px, 59.8px, #1e212c);
+    }
+  }
+  &__checks {
+    width: 390px;
+    height: 294px;
+    margin-top: 40px;
+
+    &-check {
+      display: flex;
+      align-items: start;
+      gap: 16px;
+    }
+    &-text {
+      margin-bottom: 12px;
+    }
+  }
+  &__buttons {
+    &-button {
+      width: 161px;
+      height: 44px;
+      @include text(700, 14px, 44px, #fff);
+      background: $primary;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+}
