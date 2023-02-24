@@ -24,56 +24,66 @@
     &-left {
       @include text(700, 16px, 52px, #fff);
       background: $primary;
+      cursor: pointer;
       border-radius: 4px;
       padding: 0 40px;
       border: none;
     }
     &-right {
       display: flex;
+      cursor: pointer;
       background: transparent;
       align-items: center;
       border: none;
       gap: 8px;
     }
+    &-left:hover {
+      transition: 0.2s;
+      padding: 0 41px;
+      background: linear-gradient(55.95deg, #f8322c 0%, #f56613 100%);
+    }
   }
   &__wrapper {
     display: flex;
-
-    &-img {
-      margin-top: 128px;
-      margin-left: 140px;
-    }
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 128px;
   }
   &__content {
-    margin-top: 140px;
-
     &-title {
       margin-top: 24px;
       width: 496px;
       height: 249px;
       @include text(900, 64px, 83px, #1e212c);
     }
-    &-button {
-      width: 148px;
-      height: 52px;
-      margin-top: 60px;
-      color: $primary;
-      border-radius: 4px;
-      border-color: orangered;
-      background: transparent;
-      @include text(700, 16px, 52px, orangered);
-    }
-    &-button1 {
-      width: 200px;
-      height: 52px;
-      padding: 0 40px;
-      position: relative;
-      border: none;
-      top: -2px;
-      left: 24px;
-      background: $primary;
-      border-radius: 4px;
-      @include text(700, 16px, 52px, #fff);
+    &-buttons {
+      &-button {
+        width: 148px;
+        height: 52px;
+        margin-top: 60px;
+        color: $primary;
+        border-radius: 4px;
+        border-color: orangered;
+        background: transparent;
+        cursor: pointer;
+        @include text(700, 16px, 52px, orangered);
+      }
+      &-button1 {
+        width: 200px;
+        height: 52px;
+        padding: 0 40px;
+        background: transparent;
+        position: relative;
+        top: -2px;
+        margin-left: 24px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: $primary;
+        border: none;
+        color: #fff;
+        border-color: #f75e05;
+        @include text(700, 16px, 52px, #fff);
+      }
     }
   }
   &__video {
@@ -133,14 +143,67 @@
     }
   }
 }
+.burger {
+  display: none;
+  position: relative;
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    height: 3px;
+    width: 40px;
+    background-color: #1e212c;
+    border-radius: 1.5px;
+
+    &::before {
+      content: "";
+      height: 3px;
+      width: 40px;
+      border-radius: 1.5px;
+      display: block;
+      background-color: #1e212c;
+      position: absolute;
+      top: 10px;
+    }
+
+    &::after {
+      content: "";
+      height: 3px;
+      width: 40px;
+      border-radius: 1.5px;
+      display: block;
+      background-color: #1e212c;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+
+  &__active {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    .burger__line {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 15px;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        bottom: -15px;
+      }
+    }
+  }
+}
 .section {
-  &__element{
-    &-img{
+  &__element {
+    &-img {
       position: absolute;
       left: -25px;
       top: 1300px;
     }
-    &-img1{
+    &-img1 {
       position: absolute;
       right: 0px;
       top: 1500px;
@@ -183,7 +246,341 @@
       @include text(700, 14px, 44px, #fff);
       background: $primary;
       border-radius: 4px;
+      cursor: pointer;
       border: none;
     }
+  }
+}
+.section1 {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 180px;
+  }
+  &__title {
+    &-h6 {
+      @include text(700, 16px, 24px, #1e212c);
+    }
+    &-h1 {
+      margin-top: 8px;
+      @include text(900, 46px, 59.8px, #1e212c);
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: end;
+    cursor: pointer;
+
+    &-button {
+      width: 202px;
+      height: 52px;
+      background: transparent;
+      border-color: #f75e05;
+      border-radius: 4px;
+      cursor: pointer;
+      @include text(700, 16px, 52px, #f75e05);
+    }
+    &-button:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 30px;
+    &-card:hover {
+      box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    }
+    &-card {
+      display: flex;
+      width: 585px;
+      height: 214px;
+      border: 1px solid #e5e8ed;
+      border-radius: 4px;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 32px;
+      gap: 20px;
+    }
+
+    &-line {
+      width: 79px;
+      height: 23px;
+      padding: 1px 8px;
+      background: #03cea4;
+      border-radius: 4px;
+      @include text(400, 14px, 21px, #fff);
+    }
+    &-line2 {
+      width: 97px;
+      height: 23px;
+      padding: 1px 8px;
+      background: #5a87fc;
+      border-radius: 4px;
+      @include text(400, 14px, 21px, #fff);
+    }
+    &-line3 {
+      width: 112px;
+      height: 23px;
+      padding: 1px 8px;
+      background: #f89828;
+      border-radius: 4px;
+      @include text(400, 14px, 21px, #fff);
+    }
+    &-line4 {
+      width: 59px;
+      height: 23px;
+      padding: 1px 8px;
+      background: #f52f6e;
+      border-radius: 4px;
+      @include text(400, 14px, 21px, #fff);
+    }
+
+    &-title {
+      width: 322px;
+      @include text(700, 20px, 30px, #1e212c);
+    }
+
+    &-priceline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    &-price {
+      color: red;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &-dash {
+      transform: rotate(22deg);
+      font-size: 18px;
+      font-weight: 400;
+      color: #787a80;
+    }
+    &-author {
+      font-weight: 400;
+      font-size: 18px;
+      color: #787a80;
+      line-height: 27px;
+    }
+  }
+}
+.section2 {
+  margin-top: 180px;
+  &__top {
+    &-h6 {
+      text-align: center;
+      @include text(700, 16px, 24px, #1e212c);
+    }
+    &-h1 {
+      text-align: center;
+      @include text(900, 46px, 59.8px, #1e212c);
+    }
+    &-tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+      &-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 307px;
+        height: 46px;
+        @include text(700, 16px, 25.6px, #9a9ca5);
+      }
+      &-tab:hover {
+        border: 1px solid #ff3f3a;
+        color: #ff3f3a;
+        border-radius: 4px;
+      }
+      &-tab1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 307px;
+        height: 46px;
+        border: 1px solid #ff3f3a;
+        border-radius: 4px;
+        @include text(700, 16px, 25.6px, #ff3f3a);
+      }
+      &-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  &__illustration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &-paragraph {
+      width: 495px;
+      height: 196px;
+
+      &-title {
+        margin-bottom: 24px;
+        @include text(900, 32px, 41.6px, #1e212c);
+      }
+      &-text {
+        @include text(400, 16px, 25.6px, #424551);
+      }
+    }
+  }
+}
+.section3 {
+  background: rgb(255, 211, 195);
+  &__heading {
+    text-align: center;
+    padding: 80px 0 0;
+
+    &-h6 {
+      @include text(700, 16px, 24px, #1e212c);
+    }
+    &-h1 {
+      margin-top: 8px;
+      @include text(900, 46px, 59.8px, #1e212c);
+    }
+  }
+  &__events {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+    &-list:hover {
+      box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16),
+        0px 30px 24px -10px rgba(255, 63, 58, 0.1),
+        0px 12px 10px -6px rgba(255, 63, 58, 0.08),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffff;
+      padding: 0 40px 0 40px;
+      border-radius: 4px;
+      width: 1230px;
+      height: 126px;
+
+      &-date {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-05 {
+          @include text(900, 48px, 62.4px, #ff3f3a);
+        }
+      }
+      &-time {
+        gap: 4px;
+        &-august {
+          @include text(700, 20px, 30px, #1e212c);
+        }
+        &-time {
+          @include text(400, 16px, 25.6px, #787a80);
+        }
+      }
+      &-info {
+        width: 757px;
+        height: 60px;
+        gap: 4px;
+        &-text {
+          @include text(700, 20px, 30px, #1e212c);
+        }
+        &-subtext {
+          @include text(400, 16px, 25.6px, #787a80);
+        }
+      }
+      &-button {
+        width: 136px;
+        height: 44px;
+        border-radius: 4px;
+        border-color: #ff3f3a;
+        @include text(700, 14px, 44px, #ff3f3a);
+        background: #fff;
+      }
+      &-button:hover {
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        background: $primary;
+      }
+    }
+  }
+  &__viewall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+    &-h3 {
+      @include text(700, 28px, 42px, #1e212c);
+    }
+    &-button {
+      width: 214px;
+      height: 52px;
+      border-radius: 4px;
+      background: $primary;
+      border: none;
+      @include text(700, 16px, 52px, #fff);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .header {
+    &__logo {
+      margin-left: 15px;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      row-gap: 15px;
+      height: 0;
+      z-index: 10;
+
+      .header__links-link {
+        font-size: 0;
+      }
+
+      &_active {
+        height: 100%;
+        background: rgb(255, 211, 195);
+        .header__links-link {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .burger {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 40px;
   }
 }
